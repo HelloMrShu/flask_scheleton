@@ -1,7 +1,9 @@
 from flask import render_template, request
+from src import myApp
 
 
 def index():
+    myApp.logger.info("default index action")
     return 'default page'
 
 
