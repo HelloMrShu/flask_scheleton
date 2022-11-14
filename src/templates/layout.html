@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    {% block head %}
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='layout.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='default.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='staff.css') }}">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>
+        {% block title %}{% endblock %} - BUG
+    </title>
+    {% endblock %}
+  </head>
+
+  <body>
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+  </body>
+
+</html>
