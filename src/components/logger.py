@@ -1,16 +1,20 @@
 import logging
 from logging.handlers import TimedRotatingFileHandler
-import config
 
 
-def create_handler(path):
-    formatter = logging.Formatter(
-        "%(asctime)s %(filename)s:%(lineno)d %(levelname)s %(thread)d - %(message)s", '%Y-%m-%d %H:%M:%S')
+class Logger:
+    """logger类,创建log handler
+    """
 
-    handler = TimedRotatingFileHandler(path+'/request.log', when='d', interval=1, backupCount=10,
-                                       encoding="utf8", delay=False)
+    @staticmethod
+    def create_handler(path):
+        formatter = logging.Formatter(
+            "%(asctime)s %(filename)s:%(lineno)d %(levelname)s %(thread)d - %(message)s", '%Y-%m-%d %H:%M:%S')
 
-    handler.setLevel(logging.INFO)
-    handler.setFormatter(formatter)
+        handler = TimedRotatingFileHandler(path+'/request.log', when='d', interval=1, backupCount=10,
+                                           encoding="utf8", delay=False)
 
-    return handler
+        handler.setLevel(logging.INFO)
+        handler.setFormatter(formatter)
+
+        return handler

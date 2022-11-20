@@ -2,6 +2,9 @@ import json
 
 
 class Response:
+    """接口响应类
+    """
+
     def __init__(self, code=0, msg='', content=[]):
         if type(code) == int:
             self.code = code

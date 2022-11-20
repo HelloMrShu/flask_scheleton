@@ -13,5 +13,7 @@ SQLALCHEMY_ECHO = True
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 BASE_DIR = os.path.dirname(__file__)
-LOG_FILEPATH = os.path.join(BASE_DIR, 'logs')
+LOG_DIR = os.path.join(BASE_DIR, 'logs')
 LOG_LEVEL = 'INFO'
+
+DOC_DIR = os.path.join(BASE_DIR, 'docs')
