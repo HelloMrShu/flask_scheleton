@@ -1,6 +1,5 @@
 from src.models.user import User
-from src import myApp, db
-from src.components.utils import Utils
+from src import db
 
 
 class UserService:
